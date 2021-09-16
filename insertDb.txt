@@ -1,0 +1,18 @@
+db.getCollection('Sentences').insert([
+    
+    
+    {
+    "description" : "עזוב אותך שטויות"
+
+    }
+    {
+    "description" : "מה איתך חבר"
+
+    }
+    {
+    "description" : "העובדים של נספרסו עובדים בקפסולות"
+
+    }
+    
+    
+    )
