@@ -7,7 +7,7 @@ module.exports = {
 };
 
 // Database Name
-const dbName = 'captain_game_db';
+const dbName = 'asssafMedia_db';
 
 var dbConn = null;
 
