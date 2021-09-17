@@ -39,9 +39,9 @@ if (process.env.NODE_ENV === 'production') {
 
 const authRoutes = require('./api/auth/auth.routes');
 const userRoutes = require('./api/user/user.routes');
+const logsRoutes = require('./api/logs/logs.routes');
 const sentencesRoutes = require('./api/sentences/sentences.routes');
 
-const rollRoutes = require('./api/roll/roll.routes');
 
 // const { connectSockets } = require('./services/socket.service');
 
@@ -58,7 +58,7 @@ app.get('/api/setup-session', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
-app.use('/api/roll', rollRoutes);
+app.use('/api/logs', logsRoutes);
 app.use('/api/sentences', sentencesRoutes);
 
 // connectSockets(http, session);
