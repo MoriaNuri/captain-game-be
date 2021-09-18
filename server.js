@@ -68,7 +68,7 @@ app.use('/api/sentences', sentencesRoutes);
 // our SPA (single page app) (the index.html file) and allow vue/react-router to take it from there
 app.get('/**', (req, res) => {
   console.log('hello');
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const logger = require('./services/logger.service');
