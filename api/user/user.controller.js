@@ -41,7 +41,5 @@ async function addUser(req, res) {
 module.exports = {
   getUser,
   getUsers,
-  deleteUser,
-  updateUser,
   addUser,
 };

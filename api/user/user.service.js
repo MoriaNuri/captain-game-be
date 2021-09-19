@@ -7,8 +7,6 @@ module.exports = {
   query,
   getById,
   getByUsername,
-  remove,
-  update,
   add,
 };
 
