@@ -1,7 +1,6 @@
 const logger = require('../../services/logger.service');
 const userService = require('../user/user.service');
 // const toyService = require('../roll/roll.service.js');
-const socketService = require('../../services/socket.service');
 const sentencesService = require('./sentences.service');
 const { ObjectID } = require('mongodb');
 

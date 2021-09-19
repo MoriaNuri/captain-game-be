@@ -1,5 +1,4 @@
 const logsService = require('./logs.service');
-// const socketService = require('../../services/socket.service');
 const logger = require('../../services/logger.service');
 
 module.exports = {
@@ -31,7 +30,6 @@ async function addLogs(req, res) {
 
     const savedLogs = await logsService.add(logsToSave);
     res.send(savedLogs);
-    // socketService.broadcast({ type: 'user-updated', data: review, to: savedUser._id });
   } catch (err) {
     logger.error('Failed to update logs', err);
     res.status(500).send({ err: 'Failed to update logs' });

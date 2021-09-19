@@ -1,13 +1,9 @@
 const express = require('express');
 const app = express();
-// const port=5000
-
-
 
 const cors = require('cors');
 const path = require('path');
 const expressSession = require('express-session');
-// const cookieParser = require('cookie-parser');
 
 const http = require('http').createServer(app);
 
@@ -43,13 +39,11 @@ const logsRoutes = require('./api/logs/logs.routes');
 const sentencesRoutes = require('./api/sentences/sentences.routes');
 
 
-// const { connectSockets } = require('./services/socket.service');
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware');
 app.all('*', setupAsyncLocalStorage);
 
-// TODO: check with app.use
 app.get('/api/setup-session', (req, res) => {
   req.session.connectedAt = Date.now();
   console.log('setup-session:', req.sessionID);
@@ -61,7 +55,6 @@ app.use('/api/user', userRoutes);
 app.use('/api/logs', logsRoutes);
 app.use('/api/sentences', sentencesRoutes);
 
-// connectSockets(http, session);
 
 // Make every server-side-route to match the index.html
 // so when requesting http://localhost:3030/index.html/car/123 it will still respond with
